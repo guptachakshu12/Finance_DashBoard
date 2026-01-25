@@ -68,14 +68,35 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 The application will automatically reload when you make changes to the code.
 
 ## Screenshots
-![Finboard Landing Page](<img width="1906" height="968" alt="finboard_landing_page_no_widget" src="https://github.com/user-attachments/assets/9fbc5e41-be96-4556-969f-6fa9a37479e3" />)
-![New widget Modal](<img width="1902" height="962" alt="add_new_widget" src="https://github.com/user-attachments/assets/9b59dd05-594e-4466-9f86-e6fc386c9889" />)
-![Select fields to display](<img width="1907" height="960" alt="add_widget_select_fields" src="https://github.com/user-attachments/assets/3060c60c-0e76-4249-912d-2e90f81b76df" />)
-![Widget Cards display](<img width="1912" height="972" alt="widget_cards_display_different_views" src="https://github.com/user-attachments/assets/8bfd68ce-4eb5-44f3-8c46-f5f6ececb914" />)
-![Confgiration Panel for update settings](<img width="1891" height="973" alt="widget_card_configuration_selectfields" src="https://github.com/user-attachments/assets/c8ed9b66-8b25-4903-82f0-219e3ca30f16" />)
-![Re-ordering widgets with Drag and Drop feature](<img width="1903" height="970" alt="widget_cards_reordering_drag_drop" src="https://github.com/user-attachments/assets/6bfed7e3-0fc5-4c80-876d-5dc50b754bd5" />)
-![Widget Card header - refresh to update feature](<img width="1894" height="961" alt="widget_card_real_time_auto_refresh" src="https://github.com/user-attachments/assets/df525cb4-0633-4a10-a94c-075284309c55" />)
-![Widget Card Search in Table data](<img width="1905" height="965" alt="widget_card_search_table_feat" src="https://github.com/user-attachments/assets/9ea867fe-7e1a-43a3-b4a6-c505f09de949" />)
+### 🏠 Finboard Landing Page
+![Finboard Landing Page](./finboard_landing_page_no_widget.png)
+
+### ➕ Add New Widget
+![Add New Widget](./add_new_widget.png)
+
+### 🧩 Select Fields to Display
+![Select Fields](./add_widget_select_fields.png)
+
+### 📊 Widget Cards – Different Views
+![Widget Cards Views](./widget_cards_display_different_views.png)
+
+### ⚙️ Widget Configuration – Select Fields
+![Widget Config Select Fields](./widget_card_configuration_selectfields.png)
+
+### 🛠 Widget Configuration – Update Settings
+![Widget Config Update](./widget_card_configuration_update.png)
+
+### 🔀 Reordering Widgets (Drag & Drop)
+![Drag and Drop](./widget_cards_reordering_drag_drop.png)
+
+### 🔄 Real-time Auto Refresh
+![Auto Refresh](./widget_card_real_time_auto_refresh.png)
+
+### 🔍 Search in Table Data
+![Table Search](./widget_card_search_table_feat.png)
+
+### 🔗 Finnhub API Connection
+![Finnhub API](./finhub_api_connection.png)
 
 ![Connection with Finhub API](<img width="1896" height="962" alt="finhub_api_connection" src="https://github.com/user-attachments/assets/fb008f7f-2bc1-4faa-9b69-b70c40ecd3d9" />)
 
