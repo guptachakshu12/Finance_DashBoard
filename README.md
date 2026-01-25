@@ -98,7 +98,6 @@ The application will automatically reload when you make changes to the code.
 ### 🔗 Finnhub API Connection
 ![Finnhub API](./finhub_api_connection.png)
 
-![Connection with Finhub API](<img width="1896" height="962" alt="finhub_api_connection" src="https://github.com/user-attachments/assets/fb008f7f-2bc1-4faa-9b69-b70c40ecd3d9" />)
 
 ## Building for Production
 
