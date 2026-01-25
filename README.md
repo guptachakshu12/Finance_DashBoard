@@ -67,6 +67,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 The application will automatically reload when you make changes to the code.
 
+## Screenshots
+![Finboard Landing Page](image.png)
+![New widget Modal](image-1.png)
+![Select fields to display](image-2.png)
+![Widget Cards display](image-3.png)
+![Confgiration Panel for update settings](image-5.png)
+![Re-ordering widgets with Drag and Drop feature](<Screenshot 2026-01-25 200703.png>)
+![Widget Card header - refresh to update feature](<Screenshot 2026-01-25 200810.png>)
+![Widget Card Search in Table data](image-7.png)
+
+![Connection with Finhub API](image-6.png)
+
 ## Building for Production
 
 Create an optimized production build:
