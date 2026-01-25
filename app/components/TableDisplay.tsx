@@ -114,7 +114,8 @@ export const TableDisplay: React.FC<TableDisplayProps> = ({
 
   const filterDataBySearch = (
     items: Record<string, unknown>[],
-    isCoinbase: boolean = false
+    isCoinbase: boolean = false,
+    isAlphaVantage: boolean = false
   ): Record<string, unknown>[] => {
     if (!searchQuery.trim()) return items;
 
@@ -130,6 +131,12 @@ export const TableDisplay: React.FC<TableDisplayProps> = ({
           rate.includes(searchQuery.toLowerCase()) ||
           value.includes(searchQuery.toLowerCase())
         );
+      } else if (isAlphaVantage) {
+        // For AlphaVantage format, search across all values
+        return Object.values(item).some((val) => {
+          const searchValue = String(val || "").toLowerCase();
+          return searchValue.includes(searchQuery.toLowerCase());
+        });
       } else {
         // For other formats, search across selectedFields
         return selectedFields.some((field) => {
@@ -159,7 +166,12 @@ export const TableDisplay: React.FC<TableDisplayProps> = ({
     "rate" in transformedData[0] &&
     "value" in transformedData[0];
 
-  const filteredData = filterDataBySearch(transformedData, isCoinbaseFormat);
+  // Detect if this is AlphaVantage format (single object with numeric prefixed keys)
+  const isAlphaVantageFormat =
+    transformedData.length === 1 &&
+    Object.keys(transformedData[0]).some((key) => key.match(/^\d+\./));
+
+  const filteredData = filterDataBySearch(transformedData, isCoinbaseFormat, isAlphaVantageFormat);
   const totalPages = Math.ceil(filteredData.length / itemsPerPage);
   const startIdx = (currentPage - 1) * itemsPerPage;
   const paginatedData = filteredData.slice(startIdx, startIdx + itemsPerPage);
@@ -173,7 +185,18 @@ export const TableDisplay: React.FC<TableDisplayProps> = ({
     return (
       <Table.Tr key={startIdx + idx}>
         {displayFields.map((field) => {
-          const value = getNestedValue(row, field);
+          let value: unknown;
+
+          // For AlphaVantage format, try to match field name with numeric prefixed keys
+          if (isAlphaVantageFormat) {
+            // Look for key that ends with the field name (e.g., "01. symbol" matches "symbol")
+            const matchingKey = Object.keys(row).find(
+              (key) => key.replace(/^\d+\.\s*/, "").trim().toLowerCase() === field.toLowerCase()
+            );
+            value = matchingKey ? (row as Record<string, unknown>)[matchingKey] : undefined;
+          } else {
+            value = getNestedValue(row, field);
+          }
 
           return (
             <Table.Td key={field}>
