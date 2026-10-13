@@ -1,3 +1,5 @@
+Vercel Link: finboard-blue.vercel.app
+
 # FinBoard - Finance Dashboard
 
 A modern, configurable finance dashboard built with Next.js, React, and Redux. Connect to any API and create custom data visualizations with real-time data updates.
