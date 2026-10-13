@@ -1,4 +1,4 @@
-Vercel Link: finboard-blue.vercel.app
+Vercel Link: https://finboard-blue.vercel.app/
 
 # FinBoard - Finance Dashboard
 
